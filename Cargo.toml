@@ -1,0 +1,12 @@
+[package]
+name = "kmer"
+version = "0.1.0"
+authors = ["todd <tme17@pitt.edu>"]
+edition = "2018"
+
+[lib]
+name = "kmer"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.12.3"
