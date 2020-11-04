@@ -166,7 +166,7 @@ fn calculate_distances(first_sequence_len: usize, second_sequence_len: usize, ma
     1.0 - (match_pairs.len() as f64 / alignment_length)
 }
 
-pub fn find_alignment(first_sequence: &str, second_sequence: &str, kmer_size: usize) -> f64{
+pub fn ktuple_distance(first_sequence: &str, second_sequence: &str, kmer_size: usize) -> f64{
     let first_kmers = parse_kmers(&first_sequence, kmer_size);
     let second_kmers = parse_kmers(&second_sequence, kmer_size);
     let matches = calculate_and_sort_matches(&first_kmers, &second_kmers);
