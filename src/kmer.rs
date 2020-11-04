@@ -133,6 +133,7 @@ fn find_p_alignment(kmer_matches: &Vec<(usize, usize)>) -> Vec<(usize, usize)> {
             .unwrap();
     }
 
+    pairs.push(trace_p.index);
     pairs
 }
 
@@ -161,6 +162,7 @@ fn calculate_distances(first_sequence_len: usize, second_sequence_len: usize, ma
     }
 
     let alignment_length = max(first_sequence_len + first_gap, second_sequence_len + second_gap) as f64;
+    println!("Pair length : {} | alignment length : {}", match_pairs.len(), alignment_length);
     1.0 - (match_pairs.len() as f64 / alignment_length)
 }
 
